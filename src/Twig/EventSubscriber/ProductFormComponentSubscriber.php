@@ -45,7 +45,7 @@ final readonly class ProductFormComponentSubscriber implements EventSubscriberIn
             return;
         }
 
-        $addAutomaticRedirect = $vars['form']->children['translations']->children[$localeCode]->children['addAutomaticRedirect'];
+        $addAutomaticRedirect = $vars['form']->children['translations']->children[$localeCode]->children['addAutomaticRedirect'] ?? null;
         if (!$addAutomaticRedirect instanceof FormView) {
             return;
         }
