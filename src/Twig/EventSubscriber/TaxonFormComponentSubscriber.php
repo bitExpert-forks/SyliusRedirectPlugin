@@ -45,7 +45,7 @@ final readonly class TaxonFormComponentSubscriber implements EventSubscriberInte
             return;
         }
 
-        $addAutomaticRedirect = $vars['form']->children['translations']->children[$localeCode]->children['addAutomaticRedirect'];
+        $addAutomaticRedirect = $vars['form']->children['translations']->children[$localeCode]->children['addAutomaticRedirect'] ?? null;
         if (!$addAutomaticRedirect instanceof FormView) {
             return;
         }
